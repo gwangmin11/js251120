@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도광민 | 포트폴리오</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Nanum Gothic', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 960px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        header {
+            background: #ffffff;
+            color: #333;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        header img:hover {
+            transform: scale(1.05);
+        }
+        header h1 {
+            margin: 10px 0 0;
+            font-size: 2.5rem;
+        }
+        .main-content {
+            padding: 30px;
+            background: #fff;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .main-content h2 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        .main-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        .main-content ul li {
+            background: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .main-content ul li i {
+            margin-right: 15px;
+            color: #007bff;
+            font-size: 1.2rem;
+        }
+        .interest {
+            margin-top: 30px;
+        }
+        .interest p {
+            font-size: 1.1rem;
+        }
+        .projects {
+            margin-top: 30px;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            animation: zoomIn 0.5s ease-in-out forwards;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-card h3 {
+            margin-top: 0;
+        }
+        .project-card a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact {
+            margin-top: 30px;
+        }
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .contact-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        .contact-links a:hover {
+            color: #007bff;
+        }
+        .contact-links a i {
+            margin-right: 8px;
+            font-size: 1.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin-top: 30px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/profile.svg" alt="프로필 사진">
+            <h1>도광민</h1>
+            <p>소프트웨어 융합학부</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="main-content">
+            <h2><i class="fas fa-user"></i> 기본 정보</h2>
+            <ul>
+                <li><i class="fas fa-user-circle"></i><strong>이름:</strong> 도광민</li>
+                <li><i class="fas fa-birthday-cake"></i><strong>생년월일:</strong> 2003년생 (23세)</li>
+                <li><i class="fas fa-map-marker-alt"></i><strong>거주지:</strong> 안녕동</li>
+            </ul>
+
+            <h2><i class="fas fa-graduation-cap"></i> 학력</h2>
+            <ul>
+                <li><i class="fas fa-university"></i><strong>대학교:</strong> 한신대학교</li>
+                <li><i class="fas fa-laptop-code"></i><strong>전공:</strong> 소프트웨어 융합학부</li>
+            </ul>
+
+            <h2><i class="fas fa-users"></i> 활동</h2>
+            <ul>
+                <li><i class="fas fa-sitemap"></i>AISW 학생회 '이음' 총무국 국원</li>
+            </ul>
+
+            <div class="interest">
+                <h2><i class="fas fa-star"></i> 관심 분야</h2>
+                <p>데이터베이스 분야에 관심을 가지고 현재 깊이 있게 공부하고 있습니다.</p>
+            </div>
+
+            <div class="projects">
+                <h2><i class="fas fa-project-diagram"></i> 프로젝트</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>프로젝트 1</h3>
+                        <p>프로젝트에 대한 간단한 설명입니다.</p>
+                        <a href="#">자세히 보기</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>프로젝트 2</h3>
+                        <p>프로젝트에 대한 간단한 설명입니다.</p>
+                        <a href="#">자세히 보기</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>프로젝트 3</h3>
+                        <p>프로젝트에 대한 간단한 설명입니다.</p>
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact">
+                <h2><i class="fas fa-envelope"></i> 연락처</h2>
+                <div class="contact-links">
+                    <a href="mailto:gwangmin@example.com"><i class="fas fa-envelope"></i> 이메일</a>
+                    <a href="https://github.com/your-github" target="_blank"><i class="fab fa-github"></i> 깃허브</a>
+                    <a href="#"><i class="fab fa-instagram"></i> 인스타그램</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 도광민. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
