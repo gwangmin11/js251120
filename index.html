@@ -241,9 +241,9 @@
             <div class="contact">
                 <h2><i class="fas fa-envelope"></i> 연락처</h2>
                 <div class="contact-links">
-                    <a href="mailto:gwangmin@example.com"><i class="fas fa-envelope"></i> 이메일</a>
-                    <a href="https://github.com/your-github" target="_blank"><i class="fab fa-github"></i> 깃허브</a>
-                    <a href="#"><i class="fab fa-instagram"></i> 인스타그램</a>
+                    <a href="mailto:as1545915@hs.ac.kr"><i class="fas fa-envelope"></i> 이메일</a>
+                    <a href="https://github.com/gwangmin11" target="_blank"><i class="fab fa-github"></i> 깃허브</a>
+                    <a href="https://www.instagram.com/do._km/" target="_blank"><i class="fab fa-instagram"></i> 인스타그램</a>
                 </div>
             </div>
         </div>
@@ -253,39 +253,41 @@
     </footer>
     <script src="background.js"></script>
     <script>
-        // Skill bars animation
-        const skillLevels = document.querySelectorAll('.skill-level');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.width = entry.target.dataset.level + '%';
-                }
+        document.addEventListener('DOMContentLoaded', () => {
+            // Skill bars animation
+            const skillLevels = document.querySelectorAll('.skill-level');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.width = entry.target.dataset.level + '%';
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            skillLevels.forEach(skill => {
+                observer.observe(skill);
             });
-        }, { threshold: 0.5 });
 
-        skillLevels.forEach(skill => {
-            observer.observe(skill);
-        });
+            // Fun fact generator
+            const funFactButton = document.getElementById('fun-fact-button');
+            const funFactText = document.getElementById('fun-fact-text');
+            const funFacts = [
+                "가장 좋아하는 음식은 떡볶이입니다.",
+                "해군 복무 시절 가장 기억에 남는 곳은 제주도입니다.",
+                "가장 감명 깊게 본 영화는 '인터스텔라'입니다.",
+                "코딩할 때 즐겨 듣는 음악은 잔잔한 Lo-fi 입니다.",
+                "가장 좋아하는 계절은 가을입니다."
+            ];
+            let lastFactIndex = -1;
 
-        // Fun fact generator
-        const funFactButton = document.getElementById('fun-fact-button');
-        const funFactText = document.getElementById('fun-fact-text');
-        const funFacts = [
-            "가장 좋아하는 음식은 떡볶이입니다.",
-            "해군 복무 시절 가장 기억에 남는 곳은 제주도입니다.",
-            "가장 감명 깊게 본 영화는 '인터스텔라'입니다.",
-            "코딩할 때 즐겨 듣는 음악은 잔잔한 Lo-fi 입니다.",
-            "가장 좋아하는 계절은 가을입니다."
-        ];
-        let lastFactIndex = -1;
-
-        funFactButton.addEventListener('click', () => {
-            let newFactIndex;
-            do {
-                newFactIndex = Math.floor(Math.random() * funFacts.length);
-            } while (newFactIndex === lastFactIndex);
-            lastFactIndex = newFactIndex;
-            funFactText.textContent = funFacts[newFactIndex];
+            funFactButton.addEventListener('click', () => {
+                let newFactIndex;
+                do {
+                    newFactIndex = Math.floor(Math.random() * funFacts.length);
+                } while (newFactIndex === lastFactIndex);
+                lastFactIndex = newFactIndex;
+                funFactText.textContent = funFacts[newFactIndex];
+            });
         });
     </script>
 </body>
