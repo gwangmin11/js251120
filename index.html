@@ -123,9 +123,51 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        @keyframes zoomIn {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
+        .skills {
+            margin-top: 30px;
+        }
+        .skill {
+            margin-bottom: 15px;
+        }
+        .skill p {
+            margin: 0 0 5px;
+            font-weight: bold;
+        }
+        .skill-bar {
+            background-color: #e9ecef;
+            border-radius: 5px;
+            height: 20px;
+            width: 100%;
+        }
+        .skill-level {
+            background-color: #007bff;
+            height: 100%;
+            border-radius: 5px;
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+        .fun-fact {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .fun-fact button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .fun-fact button:hover {
+            background-color: #0056b3;
+        }
+        .fun-fact p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-style: italic;
+            min-height: 20px;
         }
     </style>
 </head>
@@ -135,7 +177,7 @@
         <div class="container">
             <img src="images/profile.svg" alt="프로필 사진">
             <h1>도광민</h1>
-            <p>소프트웨어 융합학부</p>
+            <p>소프트웨어 융합학부 | 예비 데이터베이스 전문가</p>
         </div>
     </header>
     <div class="container">
@@ -145,33 +187,55 @@
                 <li><i class="fas fa-user-circle"></i><strong>이름:</strong> 도광민</li>
                 <li><i class="fas fa-birthday-cake"></i><strong>생년월일:</strong> 2003년 9월 4일</li>
                 <li><i class="fas fa-map-marker-alt"></i><strong>거주지:</strong> 안녕동</li>
-                <li><i class="fas fa-info-circle"></i><strong>MBTI:</strong> ISFP</li>
+                <li><i class="fas fa-info-circle"></i><strong>MBTI:</strong> ISFP (호기심 많은 예술가)</li>
             </ul>
 
             <h2><i class="fas fa-graduation-cap"></i> 학력</h2>
             <ul>
-                <li><i class="fas fa-university"></i><strong>대학교:</strong> 한신대학교</li>
-                <li><i class="fas fa-school"></i><strong>고등학교:</strong> 안화고등학교 졸업</li>
-                <li><i class="fas fa-school"></i><strong>중학교:</strong> 동화중학교 졸업</li>
-                <li><i class="fas fa-school"></i><strong>초등학교:</strong> 동화초등학교 졸업</li>
+                <li><i class="fas fa-university"></i><strong>대학교:</strong> 한신대학교 (소프트웨어 융합학부)</li>
+                <li><i class="fas fa-school"></i><strong>고등학교:</strong> 안화고등학교 졸업 (2022)</li>
+                <li><i class="fas fa-school"></i><strong>중학교:</strong> 동화중학교 졸업 (2019)</li>
+                <li><i class="fas fa-school"></i><strong>초등학교:</strong> 동화초등학교 졸업 (2016)</li>
             </ul>
 
-            <h2><i class="fas fa-briefcase"></i> 경력</h2>
-            <ul>
-                <li><i class="fas fa-store"></i>편의점 아르바이트 (2024.12 ~ 현재)</li>
-                <li><i class="fas fa-water"></i>해군 복무 (2023.04 ~ 2024.12)</li>
-                <li><i class="fas fa-ice-cream"></i>설빙 아르바이트 (2022 ~ 2023)</li>
-                <li><i class="fas fa-store"></i>편의점 아르바이트 (2022 ~ 2023)</li>
-            </ul>
+            <div class="skills">
+                <h2><i class="fas fa-code"></i> 기술 스택</h2>
+                <div class="skill">
+                    <p>HTML</p>
+                    <div class="skill-bar"><div class="skill-level" data-level="80"></div></div>
+                </div>
+                <div class="skill">
+                    <p>CSS</p>
+                    <div class="skill-bar"><div class="skill-level" data-level="70"></div></div>
+                </div>
+                <div class="skill">
+                    <p>JavaScript</p>
+                    <div class="skill-bar"><div class="skill-level" data-level="60"></div></div>
+                </div>
+                <div class="skill">
+                    <p>Database (SQL)</p>
+                    <div class="skill-bar"><div class="skill-level" data-level="75"></div></div>
+                </div>
+            </div>
 
-            <h2><i class="fas fa-users"></i> 활동</h2>
+            <h2><i class="fas fa-briefcase"></i> 경력 및 활동</h2>
             <ul>
-                <li><i class="fas fa-sitemap"></i>AISW 학생회 '이음' 총무국 국원</li>
+                <li><i class="fas fa-store"></i><strong>편의점 아르바이트 (2024.12 ~ 현재):</strong> 고객 응대 및 재고 관리</li>
+                <li><i class="fas fa-water"></i><strong>해군 복무 (2023.04 ~ 2024.12):</strong> 통신병으로 복무하며 책임감과 동료애를 기름</li>
+                <li><i class="fas fa-ice-cream"></i><strong>설빙 아르바이트 (2022 ~ 2023):</strong> 다양한 고객을 응대하며 소통 능력 향상</li>
+                <li><i class="fas fa-store"></i><strong>편의점 아르바이트 (2022 ~ 2023):</strong> 상품 관리 및 판매 경험</li>
+                <li><i class="fas fa-sitemap"></i><strong>AISW 학생회 '이음' (총무국 국원):</strong> 학생회비 관리 및 예산 집행</li>
             </ul>
 
             <div class="interest">
                 <h2><i class="fas fa-star"></i> 관심 분야</h2>
-                <p>데이터베이스 분야에 관심을 가지고 현재 깊이 있게 공부하고 있습니다.</p>
+                <p>데이터베이스의 효율적인 설계와 관리에 큰 흥미를 느끼고 있습니다. 대용량 데이터를 안정적으로 처리하고, 정형/비정형 데이터로부터 인사이트를 추출하는 기술을 깊이 있게 공부하고 싶습니다. 현재 SQLD 자격증을 준비하며 이론적 기반을 다지고 있으며, 개인 프로젝트를 통해 실무 역량을 키워나갈 계획입니다.</p>
+            </div>
+
+            <div class="fun-fact">
+                <h2><i class="fas fa-dice"></i> 재미있는 사실!</h2>
+                <button id="fun-fact-button">새로운 사실 보기</button>
+                <p id="fun-fact-text"></p>
             </div>
 
             <div class="contact">
@@ -188,5 +252,41 @@
         <p>&copy; 2025 도광민. All Rights Reserved.</p>
     </footer>
     <script src="background.js"></script>
+    <script>
+        // Skill bars animation
+        const skillLevels = document.querySelectorAll('.skill-level');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.width = entry.target.dataset.level + '%';
+                }
+            });
+        }, { threshold: 0.5 });
+
+        skillLevels.forEach(skill => {
+            observer.observe(skill);
+        });
+
+        // Fun fact generator
+        const funFactButton = document.getElementById('fun-fact-button');
+        const funFactText = document.getElementById('fun-fact-text');
+        const funFacts = [
+            "가장 좋아하는 음식은 떡볶이입니다.",
+            "해군 복무 시절 가장 기억에 남는 곳은 제주도입니다.",
+            "가장 감명 깊게 본 영화는 '인터스텔라'입니다.",
+            "코딩할 때 즐겨 듣는 음악은 잔잔한 Lo-fi 입니다.",
+            "가장 좋아하는 계절은 가을입니다."
+        ];
+        let lastFactIndex = -1;
+
+        funFactButton.addEventListener('click', () => {
+            let newFactIndex;
+            do {
+                newFactIndex = Math.floor(Math.random() * funFacts.length);
+            } while (newFactIndex === lastFactIndex);
+            lastFactIndex = newFactIndex;
+            funFactText.textContent = funFacts[newFactIndex];
+        });
+    </script>
 </body>
 </html>
